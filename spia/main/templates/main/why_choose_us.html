@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Why Choose Us - Section -->
+<section class="why-choose-us py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="fw-bold text-primary">Why Choose Us?</h2>
+        <p class="fs-5">We provide a unique learning experience that nurtures curiosity, global awareness, and academic excellence.</p>
+
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <img src="{% static 'icons/diverse.png' %}" alt="Diverse" class="mb-3" width="80">
+                <h4 class="fw-bold">Intellectually Diverse</h4>
+                <p>We embrace different learning styles, abilities, and interests to ensure every student thrives.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'icons/curiosity.png' %}" alt="Curiosity" class="mb-3" width="80">
+                <h4 class="fw-bold">Driven By Curiosity</h4>
+                <p>We inspire a lifelong passion for learning through curiosity-driven education.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'icons/curriculum.png' %}" alt="Curriculum" class="mb-3" width="80">
+                <h4 class="fw-bold">Our Curriculum</h4>
+                <p>Structured to meet educational goals and prepare students for the future.</p>
+            </div>
+        </div>
+
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <img src="{% static 'icons/global.png' %}" alt="Global Focus" class="mb-3" width="80">
+                <h4 class="fw-bold">Globally Focused</h4>
+                <p>Our students engage with global issues, perspectives, and opportunities.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'icons/idea.png' %}" alt="Idea Generation" class="mb-3" width="80">
+                <h4 class="fw-bold">Idea Generation</h4>
+                <p>We stimulate creativity and innovation through effective techniques.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'icons/teaching.png' %}" alt="Teaching Methods" class="mb-3" width="80">
+                <h4 class="fw-bold">Teaching Methods</h4>
+                <p>Our teaching strategies are tailored to maximize learning potential.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="our-approach py-5">
+    <div class="container">
+        <h2 class="fw-bold text-primary text-center">Our Approach</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <ul class="fs-5">
+                    <li>Develop higher critical thinking and analytical skills.</li>
+                    <li>Exhibit strong character.</li>
+                    <li>Be highly skilled in solving challenging problems.</li>
+                    <li>Form ordered, coherent, and relevant arguments.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="{% static 'images/students.jpg' %}" class="img-fluid rounded shadow" alt="Students Learning">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What Makes Us Unique Section -->
+<section class="unique-features py-5 bg-light">
+    <div class="container">
+        <h2 class="fw-bold text-primary text-center">What Makes Us Unique?</h2>
+        <ul class="fs-5 ">
+            <li>Small student-teacher ratio to ensure quality education.</li>
+            <li>Well-structured extracurricular programs for holistic development.</li>
+            <li>Special "RETEACH and CATCH UP" programs for underperforming students.</li>
+            <li>Continuous evaluation program for quality assessment.</li>
+            <li>Coaching and mentorship designed for learners.</li>
+            <li>Young, energetic, and highly trained faculty.</li>
+            <li>Clean, child-friendly facilities.</li>
+            <li>Secure environment with CCTV surveillance.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Apply Now Button -->
+<section class="apply-now text-center py-5">
+    <div class="container">
+        <a href="#" class="btn btn-lg btn-primary">Apply Now</a>
+    </div>
+</section>
+{% endblock %}

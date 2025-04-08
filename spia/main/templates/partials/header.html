@@ -1,0 +1,62 @@
+{% load static %}
+<!-- Top Bar -->
+<div class="top-bar text-center">
+    <div class="container d-flex justify-content-between">
+        <div>
+            <i class="fas fa-envelope"></i> <a href="mailto:info@spia.ac.bi">info@spia.ac.bi</a>
+            <i class="fas fa-phone"></i> +257 68 71 50 42
+            <i class="fas fa-map-marker-alt"></i> Cibitoke, Rugombo, Kamakara
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}" alt="SPIA Logo" height="150" class="me-2">
+            <strong class="fs-4">Stella Park International Academy</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'programs' %}">
+                        <i class="fas fa-graduation-cap"></i> Academics
+                    </a>
+                </li>
+                {% comment %} <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news_list' %}">
+                        <i class="fas fa-newspaper"></i> News
+                    </a>
+                </li> {% endcomment %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admissions' %}">
+                        <i class="fas fa-user-plus"></i> Admissions
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
+

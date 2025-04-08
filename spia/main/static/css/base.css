@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+
+h3{
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #3F448F;
+}
+
+/* Style par défaut pour les h1 et h2 */
+h1, h2 {
+    color: #3F448F; /* Bleu par défaut */
+}
+
+/* Style pour les titres sur une image de fond */
+.text-white {
+    color: white !important;
+}
+
+/* Style pour les titres normaux */
+.text-blue {
+    color: #3F448F !important;
+}
+
+
+.hero-section {
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-section .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Recadre l'image pour qu'elle remplisse la section */
+}
+
+.carousel {
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centre le texte */
+    text-align: center;
+    color: white;
+    width: 80%;  /* Limite la largeur du texte */
+}
+
+.overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.vision-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+} */

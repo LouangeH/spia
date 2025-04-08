@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="contact-section py-5 bg-light text-center">
+    <h2>Contact Us</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p><i class="fas fa-envelope"></i> info@spia.ac.bi</p>
+            <p><i class="fas fa-phone"></i> +257 68 71 50 42</p>
+            <p><i class="fas fa-map-marker-alt"></i> Cibitoke, Rugombo, Kamakara</p>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <input type="text" class="form-control my-2" placeholder="Full Name">
+                <input type="email" class="form-control my-2" placeholder="Email">
+                <textarea class="form-control my-2" placeholder="Message"></textarea>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

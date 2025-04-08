@@ -1,0 +1,20 @@
+
+.top-bar {
+    background-color: #3F448F;
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+}
+.top-bar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.navbar-brand img {
+    height: 150px;
+}
+.social-icons a {
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+}

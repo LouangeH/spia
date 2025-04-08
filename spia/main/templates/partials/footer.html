@@ -1,0 +1,39 @@
+{% load static %}
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Providing an outstanding international education that inspires students to excel.</p>
+                <p><strong>Address:</strong> Bujumbura, Burundi</p>
+                <p><strong>Phone:</strong> +257 123 456 789</p>
+                <p><strong>Email:</strong> contact@school.com</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                    <li><a href="{% url 'programs' %}" class="text-white">Academics</a></li>
+                    <li><a href="{% url 'admissions' %}" class="text-white">Admissions</a></li>
+                    <li><a href="{% url 'about' %}" class="text-white">Why Choose Us</a></li>
+                    <li><a href="{% url 'contact' %}" class="text-white">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                {% comment %} <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a> {% endcomment %}
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2025 Stella Park International School. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
