@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-z6h%h!+9b_b(r5@j1bt#_)4*^mh=alqf$ydg+&gbm6cxbq7+9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [spia.bi]
+DEBUG = FALSE
 
 
 # Application definition
@@ -89,11 +90,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # Web site Security
-#SECURE_SSL_REDIRECT = True  # Redirige HTTP vers HTTPS
-# SESSION_COOKIE_SECURE = True  # Protège les cookies
-# CSRF_COOKIE_SECURE = True  # Empêche l'accès CSRF en HTTP
-# X_FRAME_OPTIONS = "DENY"  # Empêche l'inclusion du site dans un iframe
-# SECURE_HSTS_SECONDS = 31536000  # Active HSTS pour un an
+SECURE_SSL_REDIRECT = True  # Redirige HTTP vers HTTPS
+SESSION_COOKIE_SECURE = True  # Protège les cookies
+CSRF_COOKIE_SECURE = True  # Empêche l'accès CSRF en HTTP
+X_FRAME_OPTIONS = "DENY"  # Empêche l'inclusion du site dans un iframe
+ SECURE_HSTS_SECONDS = 31536000  # Active HSTS pour un an
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
