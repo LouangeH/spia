@@ -21,7 +21,7 @@ def news_list(request):
     news = News.objects.all().order_by('-published_at')
     return render(request, 'main/news_list.html', {'news': news})
 
-#@ratelimit(key='ip', rate='5/m', method='POST', block=True)
+@ratelimit(key='ip', rate='5/m', method='POST', block=True)
 def admission(request):
     if request.method == "POST":
         print(request.POST)
