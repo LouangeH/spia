@@ -1,0 +1,119 @@
+/* ==========================
+   RESPONSIVE DESIGN - SPIA
+========================== */
+
+/* ==== Générales ==== */
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==== Typographie adaptative ==== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p, label, button, input, select {
+        font-size: 1rem;
+    }
+}
+
+/* ==== Hero Section ==== */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+
+    .overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* ==== Navbar ==== */
+@media (max-width: 992px) {
+    .navbar-brand img {
+        height: 80px;
+    }
+
+    .top-bar {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 14px;
+    }
+}
+
+/* ==== Sections et Containers ==== */
+@media (max-width: 768px) {
+    .container,
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+    }
+
+    .row > .col-md-6,
+    .row > .col-md-4,
+    .row > .col-md-3 {
+        margin-bottom: 20px;
+    }
+}
+
+/* ==== Formulaires ==== */
+@media (max-width: 768px) {
+    form .form-control {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    form .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* ==== Carousel Fix ==== */
+@media (max-width: 576px) {
+    .hero-section .carousel-item img {
+        object-position: center;
+    }
+}
+
+/* ==== Footer (si tu en as un) ==== */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .col {
+        margin-bottom: 15px;
+    }
+}

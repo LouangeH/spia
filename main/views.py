@@ -5,8 +5,8 @@ from django_ratelimit.decorators import ratelimit
 from django.http import JsonResponse
 
 def home(request):
-    news = News.objects.all().order_by('-published_at')[:3]  # Dernières 3 actualités
-    return render(request, 'main/home.html', {'news': news})
+    #news = News.objects.all().order_by('-published_at')[:3]  # Dernières 3 actualités
+    return render(request, 'main/home.html')
 
 def about(request):
     return render(request, 'main/about.html')

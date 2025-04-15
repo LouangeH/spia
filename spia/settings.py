@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import pymysql
+import os
+
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +29,8 @@ SECRET_KEY = 'django-insecure-z6h%h!+9b_b(r5@j1bt#_)4*^mh=alqf$ydg+&gbm6cxbq7+9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [spia.bi]
-DEBUG = FALSE
+ALLOWED_HOSTS = ['*']
+DEBUG = True
 
 
 # Application definition
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    
 ]
 
 MIDDLEWARE = [
@@ -49,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #New pip
 ]
 
 ROOT_URLCONF = 'spia.urls'
@@ -78,23 +84,37 @@ WSGI_APPLICATION = 'spia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stella_academy',  # Nom de ta base MySQL
-        'USER': 'root',  # Nom d'utilisateur MySQL
-        'PASSWORD': '',  # Mot de passe MySQL (vide par défaut sur XAMPP)
-        'HOST': 'localhost',
+        'NAME': 'ipsdibur_spia',  # Nom de ta base MySQL
+        'USER': 'ipsdibur_root',  # Nom d'utilisateur MySQL
+        'PASSWORD': 'ipsdiburundi', 
+        'HOST': '',
         'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
 # Web site Security
 SECURE_SSL_REDIRECT = True  # Redirige HTTP vers HTTPS
 SESSION_COOKIE_SECURE = True  # Protège les cookies
 CSRF_COOKIE_SECURE = True  # Empêche l'accès CSRF en HTTP
 X_FRAME_OPTIONS = "DENY"  # Empêche l'inclusion du site dans un iframe
- SECURE_HSTS_SECONDS = 31536000  # Active HSTS pour un an
+SECURE_HSTS_SECONDS = 31536000  # Active HSTS pour un an
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -127,10 +147,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
