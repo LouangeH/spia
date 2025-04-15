@@ -1,184 +1,9 @@
 {% extends 'base.html' %}
-{% comment %} {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-<section class="vision-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/school_building.jpg" %}') center/cover no-repeat; height: 100vh;">
-    <div class="overlay p-5">
-      <h2 class="fw-bold">About Us</h2>
-      <p class="fs-4">Providing an outstanding international education that inspires students to excel.</p>
-      <a href="#" class="btn btn-lg btn-primary">Learn More</a>
-    </div>
-  </section>
-
-  <section class="contact-section py-5 bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Image Section -->
-            <div class="col-md-6 d-flex justify-content-center">
-                <img src="{% static 'static/images/school_building.jpg' %}" class="img-fluid rounded shadow" alt="School Building">
-            </div>
-            
-            <!-- Text Section -->
-            <div class="col-md-6">
-                <h3 class="fw-bold text-primary">Welcome From Head of School</h3>
-                <p class="fs-5 text-justify">
-                    Our vision is to develop lifelong learners who can promote peace in today’s fast-changing world. 
-                    We aim to fully equip them with holistic skills that will prepare them to diligently serve and offer reflective solutions 
-                    to 21st-century challenges, including globalization, technological advancements, and shifting demographics.
-                </p>
-                <p class="fs-5 text-justify">
-                    SPIA welcomes students aged **1.5 to 19 years**, offering both **Day and Boarding** options. Our facilities meet the 
-                    highest **international education standards**, including **ICT and Science laboratories** tailored for Cambridge and IB curricula.
-                </p>
-                <p class="fs-5 text-justify">
-                    Nestled along the shores of **Lake Tanganyika**, SPIA provides a **serene learning environment**. Our structured social, 
-                    moral, and academic discipline fosters a holistic approach to education. The mentorship program led by the Welfare Office 
-                    ensures student development beyond academics.
-                </p>
-                <p class="fs-5 text-justify">
-                    <strong>Mme Goreth – Head of School</strong>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="video-section text-center py-5">
-    <video width="80%" controls>
-        <source src="{% static 'videos/school_intro.mp4' %}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</section>
-
-<section class="contact-section py-5 bg-light text-center">
-    <div class="col-md">
-        <h3 class="fw-bold">Our History</h3>
-        <p class="fs-4 justify-content-center">Inspired by leading international schools in the region, the founders aimed to provide access to Internationally renowned education programs for Burundian and International students in Burundi and cultivate strong global citizenship.
-
-            In September 2018, Cubahiro International School became the first in Burundi to implement the Cambridge Advanced International Certificate of Education (AICE) Curriculum.
-            
-            The school’s set high standards led to its inauguration by H.E Pierre Nkurunziza, the President of Burundi, on October 15, 2018.
-            
-            In 2023, Cubahiro International School became the first school in Burundi to express interest to offer the prestigious International Baccalaureate (IB) program. CIS is now a candidate school for both IBMYP and IBDP.
-            
-            The founders’ mission is to foster excellence and community service as it is embodied in the school’s motto: ” Striving for excellence and Humility in Service. “</p>
-    </div>
-</section>
-{% endblock %} {% endcomment %}
-
-
-{% comment %} {% load static %}
-
-{% block content %}
-{% comment %} vision-section text-center text-white position-relative d-flex align-items-center justify-content-center {% endcomment %}
 <!-- Hero Section -->
 {% comment %}<section class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/school_building.jpg" %}') center/cover no-repeat; height: 100vh;">
-    <div class="overlay p-5">
-        <h1 class="fw-bold text-white">Who We Are & What We Stand For</h1>
-        <p class="fs-4">Providing an outstanding international education that inspires students to excel.</p>
-        <a href="#vision-mission" class="btn btn-lg btn-primary">Learn More</a>
-    </div>
-</section>
-
-<!-- Our Story -->
-<section class="our-story-section py-5 text-center bg-light">
-    <div class="container">
-        <h2 class="fw-bold">Our Story</h2>
-        <p class="fs-5">Founded in [Year], our school has been committed to delivering excellence in education. Our journey started with a vision to provide internationally recognized education to students in Burundi and beyond.</p>
-    </div>
-</section>
-
-<!-- Our Vision & Mission -->
-<section id="vision-mission" class="vision-mission-section py-5 text-center">
-    <div class="container">
-        <h2 class="fw-bold">Our Vision & Mission</h2>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h3 class="fw-bold">Our Vision</h3>
-                <p class="fs-5">To nurture lifelong learners who promote peace and are equipped with skills to tackle global challenges.</p>
-            </div>
-            <div class="col-md-6">
-                <h3 class="fw-bold">Our Mission</h3>
-                <p class="fs-5">To provide a holistic, internationally recognized education that empowers students with knowledge, values, and skills.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Our Core Values -->
-<section class="core-values-section py-5 bg-light text-center">
-    <div class="container">
-        <h2 class="fw-bold">Our Core Values</h2>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <i class="fas fa-award fa-3x"></i>
-                <h5>Excellence</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-handshake fa-3x"></i>
-                <h5>Integrity</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-lightbulb fa-3x"></i>
-                <h5>Innovation</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-users fa-3x"></i>
-                <h5>Respect</h5>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Meet Our Leadership -->
-<section class="leadership-section py-5 text-center">
-    <div class="container">
-        <h2 class="fw-bold">Meet Our Leadership</h2>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <img src="{% static 'images/head_of_school.jpg' %}" class="img-fluid rounded-circle" alt="Head of School">
-                <h5 class="mt-3">Mme Goreth</h5>
-                <p>Head of School</p>
-            </div>
-            <!-- Add more leadership team members here -->
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Us -->
-<section class="why-choose-us-section py-5 bg-light text-center">
-    <div class="container">
-        <h2 class="fw-bold">Why Choose Us?</h2>
-        <p class="fs-5">We offer a world-class education with top-tier facilities and dedicated faculty.</p>
-    </div>
-</section>
-
-<!-- Our Campus -->
-<section class="campus-section py-5 text-center">
-    <div class="container">
-        <h2 class="fw-bold">Our Campus</h2>
-        <p class="fs-5">A modern, secure, and inspiring learning environment.</p>
-    </div>
-</section>
-
-<!-- Call-to-Action -->
-<section class="cta-section py-5 bg-primary text-white text-center">
-    <div class="container">
-        <h2 class="fw-bold">Join Us Today</h2>
-        <p class="fs-5">Be part of an academic community that nurtures excellence and character.</p>
-        <a href="#" class="btn btn-lg btn-light">Apply Now</a>
-    </div>
-</section>
-
-{% endblock %} {% endcomment %}
-
-{% load static %}
-
-{% block content %}
-<!-- Hero Section -->
-<section class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/school_building.jpg" %}') center/cover no-repeat; height: 100vh;">
     <div class="overlay p-5">
         <h1 class="fw-bold text-white">Who We Are & What We Stand For</h1>
         <p class="fs-4">Providing an outstanding international education that inspires students to excel.</p>
@@ -227,6 +52,149 @@
             <div class="col-md-4">
                 <h4>Innovation</h4>
                 <p>We embrace creativity and modern educational approaches.</p>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+
+<!-- Hero Section -->
+<section class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/school_building.jpg" %}') center/cover no-repeat; height: 100vh;">
+    <div class="overlay p-5">
+        <h1 class="fw-bold text-white">Who We Are & What We Stand For</h1>
+        <p class="fs-4">Providing an outstanding international education that inspires students to excel.</p>
+        <a href="#vision-mission" class="btn btn-lg btn-primary">Learn More</a>
+    </div>
+</section>
+
+<!-- Our Story -->
+<section class="our-story-section py-5 text-center bg-light">
+    <div class="container">
+        <h2 class="fw-bold">Our Story</h2>
+        <p class="fs-5">
+            Stella Park International Academy is not just a school—it's a community committed to excellence, not elitism. Our belief is that true excellence involves lifting each other up and offering personalized education that adapts to each student's needs and potential. SPIA nurtures talents, fosters growth, and promotes fairness for every learner, regardless of their background.
+        </p>
+    </div>
+</section>
+
+<!-- Our Vision & Mission -->
+<section id="vision-mission" class="vision-mission-section py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Our Vision & Mission</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3 class="fw-bold">Our Vision</h3>
+                <p class="fs-5">A person committed to bringing positive and change-generating impacts to society.</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold">Our Mission</h3>
+                <p class="fs-5">To provide an inspiring educational environment, conducive to the growth of the mind and soul in a Christian way of life and through a holistic approach.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What Excellence Means to Us -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">What Do We Mean by “Excellence”?</h2>
+        <p class="fs-5">Excellence at SPIA means placing the learner at the center of all our actions. We promote individual growth, nurture unique talents, and adapt learning to each student's pace and needs. It’s about collaboration, creativity, and respect—not competition or elitism.</p>
+    </div>
+</section>
+
+<!-- Our Pedagogy of Excellence -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">What Our Pedagogy of Excellence Consists Of</h2>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ Promote heterogeneous classes to ensure equity and equal opportunities.</li>
+            <li>✔ Blend group activities and individualized learning to meet different needs.</li>
+            <li>✔ Encourage educational innovations and best practices through collaboration.</li>
+            <li>✔ Emphasize holistic development including values like courage, respect, and humility—values of Ubuntu.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Pedocentrism -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Learning at the Center of Our Activities</h2>
+        <p class="fs-5">
+            We believe every learner can succeed. Through small classes, personalized instruction, and integration pedagogy, SPIA helps each student grow intellectually, emotionally, and spiritually.
+        </p>
+    </div>
+</section>
+
+<!-- Girls Empowerment -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Promoting Educational Values for Girls</h2>
+        <p class="fs-5">SPIA ensures a safe, inclusive, and empowering space for girls. We promote:</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ Equal role sharing and responsibility</li>
+            <li>✔ Zero tolerance to gender-based violence or discrimination</li>
+            <li>✔ Fair access to leadership</li>
+            <li>✔ Health and sexuality education</li>
+            <li>✔ Awareness campaigns against harmful stereotypes</li>
+        </ul>
+    </div>
+</section>
+
+<!-- School Coaching -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">School Coaching</h2>
+        <p class="fs-5">
+            Our coaching helps learners gain confidence, improve their organization, and tackle school and life challenges. We track progress using follow-up sheets and encourage growth in every dimension—intellectual, emotional, physical, and spiritual.
+        </p>
+    </div>
+</section>
+
+<!-- Our Pillars -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Devices to Guarantee Excellence</h2>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ Learn to Know</li>
+            <li>✔ Learn to Do</li>
+            <li>✔ Learn to Live Together</li>
+            <li>✔ Learn to Be</li>
+            <li>✔ Learn to Transform Yourself and Society</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Portrait of a SPIA Graduate -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Portrait of a SPIA Graduate</h2>
+        <p class="fs-5">After 6 years at SPIA, our graduates will:</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ Generate and evaluate impactful ideas and solutions</li>
+            <li>✔ Communicate effectively and respectfully across cultures</li>
+            <li>✔ Demonstrate independence, professionalism, and teamwork</li>
+            <li>✔ Embrace lifelong learning and adaptability</li>
+            <li>✔ Be responsible, feedback-oriented, and proactive</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Our Core Values -->
+<section class="core-values-section py-5 text-center bg-light">
+    <div class="container">
+        <h2 class="fw-bold">Our Core Values</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Integrity</h4>
+                <p>We uphold honesty, responsibility, and ethical conduct.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Resilience</h4>
+                <p>We face challenges with strength, determination, and positivity.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Excellence</h4>
+                <p>We aim for continuous improvement and quality in all we do.</p>
             </div>
         </div>
     </div>
