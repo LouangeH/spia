@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="intro-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/classroom.jpg" %}') center/cover no-repeat; height: 60vh;">
+    <div class="overlay p-5">
+        <h2 class="fw-bold">Academic Programs</h2>
+        <p class="fs-4">Discover our comprehensive and globally competitive subject offerings</p>
+    </div>
+</section>
+
+<!-- Junior Secondary -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Junior Secondary (Years 7–10)</h3>
+        <p class="fs-5">These foundational years aim to strengthen core academic skills and build confidence.</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ English</li>
+            <li>✔ Mathematics</li>
+            <li>✔ Life Science (Combined)</li>
+            <li>✔ Global Perspectives</li>
+            <li>✔ Physical Education (PE)</li>
+            <li>✔ Computer Science & Information Technology</li>
+            <li>✔ Digital Media & Design</li>
+            <li>✔ Life Skills & Citizenship Education</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Senior Secondary Year 11 -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Senior Secondary – Year 11</h3>
+        <p class="fs-5">Core subjects in preparation for IGCSE and Cambridge Certifications.</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ English</li>
+            <li>✔ Mathematics</li>
+            <li>✔ Physics</li>
+            <li>✔ Chemistry</li>
+            <li>✔ Biology</li>
+            <li>✔ Computer Science</li>
+            <li>✔ Information & Communication Technology (ICT)</li>
+            <li>✔ Business Studies</li>
+            <li>✔ Economics</li>
+            <li>✔ Global Perspectives</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Senior Secondary Years 12–13 -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Senior Secondary – Years 12 & 13</h3>
+        <p class="fs-5">Advanced studies for university preparation and global opportunities.</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ English</li>
+            <li>✔ Mathematics</li>
+            <li>✔ Physics</li>
+            <li>✔ Chemistry</li>
+            <li>✔ Biology</li>
+            <li>✔ Computer Science</li>
+            <li>✔ ICT & Digital Media</li>
+            <li>✔ Business Studies</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Optional Subjects -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Optional & Enrichment Subjects</h3>
+        <p class="fs-5">Students may choose one elective to further develop their passions and talents.</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ Music</li>
+            <li>✔ French</li>
+            <li>✔ Art & Design</li>
+            <li>✔ Geography</li>
+            <li>✔ History</li>
+            <li>✔ Health and Well-being</li>
+            <li>✔ Swimming & Sports</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Global Certifications & Orientation -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Certifications & Global Readiness</h3>
+        <p class="fs-5">
+            SPIA prepares students to thrive internationally. From Year 7, learners receive <strong>intensive English instruction</strong> and are trained to succeed in recognized certifications like <strong>IELTS, TOEFL, and Cambridge Exams</strong>.
+        </p>
+        <p class="fs-5">
+            With support from experienced mentors and a strong academic structure, our graduates are equipped for top universities and international careers.
+        </p>
+    </div>
+</section>
+
+{% endblock %}
