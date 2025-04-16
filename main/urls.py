@@ -7,7 +7,8 @@ urlpatterns = [
     path('programs/', programs, name='programs'),
     path('contact/', contact, name='contact'),
     path('news/', news_list, name='news_list'),
-    path('admission/', admission, name='admissions'),
+    path('admission_online/', register, name='admissions'),
+    path('admission/', admission, name='admissions_presentation'),    
     path('boarding/', boarding, name='boarding_details'),
     path('why-choose-us/', why, name='why_spia'),
 ]
