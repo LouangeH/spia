@@ -272,60 +272,6 @@
     </form>
 </section>
 
-{% comment %} <script>
-      document.addEventListener("DOMContentLoaded", function () {
-      const steps = document.querySelectorAll(".step");
-      const nextBtns = document.querySelectorAll(".next-step");
-      const prevBtns = document.querySelectorAll(".prev-step");
-      const fileInputs = document.querySelectorAll("input[type='file']");
-      
-      let currentStep = 0;
-      
-      function showStep(stepIndex) {
-          steps.forEach((step, index) => {
-              step.classList.toggle("d-none", index !== stepIndex);
-          });
-      }
-      
-      nextBtns.forEach((button, index) => {
-          button.addEventListener("click", function () {
-              if (validateStep(index)) {
-                  currentStep++;
-                  showStep(currentStep);
-              }
-          });
-      });
-      
-      prevBtns.forEach((button) => {
-          button.addEventListener("click", function () {
-              currentStep--;
-              showStep(currentStep);
-          });
-      });
-  
-      function validateStep(stepIndex) {
-          const inputs = steps[stepIndex].querySelectorAll("input, select");
-          for (const input of inputs) {
-              if (!input.checkValidity()) {
-                  alert("Please fill in all required fields.");
-                  return false;
-              }
-          }
-          return true;
-      }
-      
-      fileInputs.forEach(input => {
-          input.addEventListener("change", function () {
-              if (this.files[0].size > 200000) { // 200 KB limit
-                  alert("File size must be less than 200 KB.");
-                  this.value = "";
-              }
-          });
-      });
-  
-      showStep(currentStep);
-  });
-</script> {% endcomment %}
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
