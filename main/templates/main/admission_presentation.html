@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="intro-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/admission_banner.jpg" %}') center/cover no-repeat; height: 60vh;">
+    <div class="overlay p-5">
+        <h2 class="fw-bold">Admissions at SPIA</h2>
+        <p class="fs-4">Preparing our campus and policies to welcome future global leaders.</p>
+    </div>
+</section>
+
+<!-- Infrastructure & Equipment -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Campus & Infrastructure Readiness</h3>
+        <p class="fs-5">Our modern infrastructure is being designed to provide students with a secure, inclusive, and inspiring environment for academic and personal development. From classrooms and dormitories to digital access and sanitation — every detail is built with excellence.</p>
+    </div>
+</section>
+
+<!-- Administrative Procedures -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Administrative Procedures</h3>
+        <p class="fs-5">SPIA is currently securing authorizations, recruiting qualified staff, and formalizing international partnerships to align with the Cambridge standards.</p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li>✔ Registration with the Ministry of Education</li>
+            <li>✔ Legal setup and tax compliance</li>
+            <li>✔ Recruitment of qualified teachers and administrators</li>
+            <li>✔ Partnership with a Ugandan Cambridge-certified institution</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Discipline & Internal Code -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Discipline & Values</h3>
+        <p class="fs-5">SPIA emphasizes a safe and respectful learning environment. Our discipline policy promotes self-control, punctuality, mutual respect, and Christian values. Misconduct is addressed through a transparent system of fair sanctions and guidance.</p>
+        <p class="fs-5">For full details, download the <strong>Internal Rules & Discipline Code</strong>.</p>
+        <a href="{% static 'documents/SPIA_Rules_and_Discipline.pdf' %}" class="btn btn-outline-primary mb-3" target="_blank">
+            📥 Download Full Regulation Document (PDF)
+        </a>
+    </div>
+</section>
+
+<!-- Apply Now -->
+<section class="py-5 text-center bg-light">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Ready to Join SPIA?</h3>
+        <p class="fs-5">Admissions for the 2025–2026 academic year are open. Choose the method that suits you best:</p>
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-4 mt-4">
+            <a href="{% url 'admissions' %}" class="btn btn-primary btn-lg">
+                📝 Apply Online
+            </a>
+            <a href="https://drive.google.com/your_word_form_link" target="_blank" class="btn btn-outline-secondary btn-lg">
+                📄 Download Form (Word)
+            </a>
+        </div>
+        <p class="mt-3 fs-6 text-muted">Complete the downloaded form, then email it scanned to <strong>contact@stella-park.org</strong> or bring it to our liaison office.</p>
+    </div>
+</section>
+
+{% endblock %}
