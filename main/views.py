@@ -10,6 +10,15 @@ def home(request):
 
 def about(request):
     return render(request, 'main/about.html')
+    
+def courses(request):
+    return render(request, 'main/courses.html')
+
+def governance(request):
+    return render(request, 'main/governance.html')
+
+def admission(request):
+    return render(request, 'main/admission_presentations.html')
 
 def programs(request):
     return render(request, 'main/programs.html')
@@ -22,7 +31,7 @@ def news_list(request):
     return render(request, 'main/news_list.html', {'news': news})
 
 @ratelimit(key='ip', rate='5/m', method='POST', block=True)
-def admission(request):
+def register(request):
     if request.method == "POST":
         print(request.POST)
         form = AdmissionForm(request.POST, request.FILES)
@@ -39,5 +48,5 @@ def admission(request):
 def boarding(request):
     return render(request, 'main/boarding.html')
 
-def why(request):
-    return render(request, 'main/why_choose_us.html')
+def campus(request):
+    return render(request, 'main/school_life.html')
