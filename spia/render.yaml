@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: spia
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn spia.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: spia.settings
+      - key: SECRET_KEY
+        value: 'django-insecure-z6h%h!+9b_b(r5@j1bt#_)4*^mh=alqf$ydg+&gbm6cxbq7+9q'
+      - key: DEBUG
+        value: "False"
+      - key: EMAIL_HOST_USER
+        value: info@spia.bi
+      - key: EMAIL_HOST_PASSWORD
+        value: ton_mot_de_passe_mail
