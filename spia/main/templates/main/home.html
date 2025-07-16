@@ -1,187 +1,4 @@
 {% extends 'base.html' %}
-{% comment %} {% extends 'base.html' %}
-{% load static %}
-{% block content %}
-
-<!-- Hero Section with Carousel -->
-<section id="hero" class="hero-section carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-          <img src="{% static 'images/school_building.jpg' %}" class="d-block w-100" alt="School Image 1">
-      </div>
-      <div class="carousel-item">
-          <img src="{% static 'images/school_building.jpg' %}" class="d-block w-100" alt="School Image 2">
-      </div>
-      <div class="carousel-item">
-          <img src="{% static 'images/school_building.jpg' %}" class="d-block w-100" alt="School Image 3">
-      </div>
-  </div>
-  <div class="overlay text-center">
-      <h1 class="animate-text text-white">Welcome to Stella Park International Academy</h1>
-      <p class="subtitle">Empowering Future Leaders Through Quality Education</p>
-      <a href="{% url 'admissions' %}" class="btn btn-primary">Apply Now</a>
-  </div>
-</section>
-
-<!-- Boarding & Why SPIA Section -->
-<section class="container text-center py-5">
-  <div class="row">
-    <div class="col-md-6">
-      <i class="fas fa-bed fa-3x"></i>
-      <h3>Boarding</h3>
-      <p>We offer state-of-the-art boarding facilities...</p>
-      <a href="#" class="btn btn-outline-primary">Learn More</a>
-    </div>
-    <div class="col-md-6">
-      <i class="fas fa-lightbulb fa-3x"></i>
-      <h3>Why SPIA?</h3>
-      <p>Discover why we are the best choice...</p>
-      <a href="#" class="btn btn-outline-primary">Learn More</a>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/school_building.jpg" %}') center/cover no-repeat;">
-  <div class="overlay p-5">
-    <h2 class="fw-bold text-white">Our Vision</h2>
-    <p class="fs-4">Providing an outstanding international education that inspires students to excel.</p>
-    <a href="#" class="btn btn-lg btn-primary">Learn More</a>
-  </div>
-</section>
-
-<!-- Records Section -->
-<section class="records-section py-5 text-center bg-primary text-white color: #ffffff">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h3><i class="fas fa-user-tie fa-2x"></i><br>50+ Certified Teachers</h3>
-      </div>
-      <div class="col-md-4">
-        <h3><i class="fas fa-chalkboard fa-2x"></i><br>20+ Classrooms</h3>
-      </div>
-      <div class="col-md-4">
-        <h3><i class="fas fa-user-graduate fa-2x"></i><br>500+ Enrolled Students</h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- School Video -->
-<section class="video-section text-center py-5">
-    <video width="80%" controls>
-        <source src="{% static 'videos/school_intro.mp4' %}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</section>
-
-<!-- Curriculum Section -->
-<section class="curriculum-section py-5 text-center">
-    <h2>Our Curriculum</h2>
-    <p>We offer a balanced and enriched curriculum...</p>
-    <a href="#" class="btn btn-primary">Why SPIA?</a>
-</section>
-
-<!-- Admission Form -->
-<section class="container py-5">
-  <h2 class="text-center">Apply for Admission</h2>
-  <p class="text-center">Join us for an exceptional educational experience.</p>
-  <form method="POST" action="">
-    {% csrf_token %}
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <label for="full-name">Full Name</label>
-        <input type="text" class="form-control" id="full-name" name="full_name" required>
-      </div>
-      <div class="col-md-6 mb-3">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <label for="nationality">Nationality</label>
-        <input type="text" class="form-control" id="nationality" name="nationality" required>
-      </div>
-      <div class="col-md-6 mb-3">
-        <label for="phone">Phone Number</label>
-        <input type="tel" class="form-control" id="phone" name="phone" required>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label for="grade">Grade Applying For</label>
-      <select class="form-control" id="grade" name="grade">
-        <option value="">Select Grade</option>
-        <option value="1">Grade 1</option>
-        <option value="2">Grade 2</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</section>
-
-<!-- Our Team -->
-<section class="our-team-section py-5 text-center">
-    <h2>Our Team</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <img src="{% static 'images/school_building.jpg' %}" class="rounded-circle" width="150">
-            <h4>John Doe</h4>
-            <p>Principal</p>
-        </div>
-        <div class="col-md-4">
-            <img src="{% static 'images/school_building.jpg' %}" class="rounded-circle" width="150">
-            <h4>Jane Smith</h4>
-            <p>Vice Principal</p>
-        </div>
-        <div class="col-md-4">
-            <img src="{% static 'images/school_building.jpg' %}" class="rounded-circle" width="150">
-            <h4>Mark Brown</h4>
-            <p>Head Teacher</p>
-        </div>
-    </div>
-    <a href="#" class="btn btn-primary">See All Members</a>
-</section>
-
-<!-- News & Events Countdown -->
-<section class="news-events-section py-5 text-center bg-secondary text-white">
-    <h2>News & Events</h2>
-    <div id="countdown"></div>
-</section>
-
-<script>
-    var eventDate = new Date("September 8, 2025 00:00:00").getTime();
-    setInterval(function() {
-        var now = new Date().getTime();
-        var distance = eventDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("countdown").innerHTML = `${days} Days ${hours} Hours`;
-    }, 1000);
-</script>
-
-<!-- Contact Section -->
-<section class="contact-section py-5 bg-light text-center">
-    <h2>Contact Us</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <p><i class="fas fa-envelope"></i> info@spia.ac.bi</p>
-            <p><i class="fas fa-phone"></i> +257 68 71 50 42</p>
-            <p><i class="fas fa-map-marker-alt"></i> Cibitoke, Rugombo, Kamakara</p>
-        </div>
-        <div class="col-md-6">
-            <form>
-                <input type="text" class="form-control my-2" placeholder="Full Name">
-                <input type="email" class="form-control my-2" placeholder="Email">
-                <textarea class="form-control my-2" placeholder="Message"></textarea>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-{% endblock %} {% endcomment %}
 
 {% load static %}
 {% block content %}
@@ -190,83 +7,92 @@
 <section id="hero" class="hero-section carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="{% static 'images/school_building.jpg' %}" class="d-block w-100" alt="SPIA Campus">
+          <img src="{% static 'images/c8.jpg' %}" class="d-block w-100" alt="SPIA Campus">
       </div>
       <div class="carousel-item">
-          <img src="{% static 'images/school_students.jpg' %}" class="d-block w-100" alt="SPIA Students">
+          <img src="{% static 'images/c7.jpg' %}" class="d-block w-100" alt="SPIA Students">
       </div>
       <div class="carousel-item">
-          <img src="{% static 'images/school_facilities.jpg' %}" class="d-block w-100" alt="SPIA Facilities">
+          <img src="{% static 'images/ref4.jpg' %}" class="d-block w-100" alt="SPIA Facilities">
       </div>
   </div>
   <div class="overlay text-center">
-      <h1 class="animate-text text-white">Welcome to Stella Park International Academy</h1>
-      <p class="subtitle">Empowering Future Leaders Through Quality Education</p>
-      <a href="{% url 'admissions' %}" class="btn btn-primary">Apply Now</a>
+      <h1 class="animate-text text-white">Stella Park International Academy</h1>
+      <p class="subtitle">Learning with Purpose, Living with Integrity</p>
+      <a href="{% url 'admissions_presentation' %}" class="btn btn-primary">Apply Now</a>
   </div>
 </section>
 
-<!-- About SPIA Section -->
+<!-- About SPIA -->
 <section class="container text-center py-5">
-  <h2>About Stella Park International Academy</h2>
-  <p>Located in Kamakara, Cibitoke Province, SPIA is dedicated to academic excellence and holistic development. We provide a world-class curriculum that prepares students for global opportunities.</p>
+  <h2>Welcome to SPIA Kamakara</h2>
+  <p>Located in Kamakara, Cibitoke Province, Stella Park International Academy is a school of excellence committed to empowering future leaders through holistic, Christian-centered education.</p>
 </section>
 
-<!-- Why Choose SPIA Section -->
+<!-- Our Vision and Mission -->
 <section class="container text-center py-5 bg-light">
-  <div class="row">
+  <h2>Our Vision & Mission</h2>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h4><i class="fas fa-eye"></i> Vision</h4>
+      <p>A person committed to bringing positive and change-generating impacts to society.</p>
+    </div>
+    <div class="col-md-6">
+      <h4><i class="fas fa-bullseye"></i> Mission</h4>
+      <p>To provide an inspiring educational environment, conducive to the growth of the mind and soul in a Christian way of life and through a holistic approach.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose SPIA -->
+<section class="container text-center py-5">
+  <h2>Why Choose SPIA?</h2>
+  <div class="row mt-4">
     <div class="col-md-4">
       <i class="fas fa-graduation-cap fa-3x"></i>
-      <h3>Academic Excellence</h3>
-      <p>We offer a rigorous curriculum designed to develop critical thinking and innovation.</p>
+      <h4>Academic Excellence</h4>
+      <p>We aim to deliver an adaptive and personalized education that brings out the best in every student.</p>
     </div>
     <div class="col-md-4">
       <i class="fas fa-globe fa-3x"></i>
-      <h3>Global Perspective</h3>
-      <p>Our programs prepare students for international opportunities, including IELTS & TOEFL certification.</p>
+      <h4>Global Orientation</h4>
+      <p>Our curriculum integrates 21st-century skills, with a focus on language certification and international standards.</p>
     </div>
     <div class="col-md-4">
-      <i class="fas fa-users fa-3x"></i>
-      <h3>Holistic Development</h3>
-      <p>Beyond academics, we focus on leadership, sports, and extracurricular excellence.</p>
+      <i class="fas fa-hands-helping fa-3x"></i>
+      <h4>Inclusive Excellence</h4>
+      <p>We foster collaboration, equality, and personal growth for every learner, regardless of background.</p>
     </div>
   </div>
 </section>
 
-<!-- Boarding Facilities -->
-<section class="container text-center py-5">
+<!-- Boarding and Location -->
+<section class="container text-center py-5 bg-light">
   <div class="row">
     <div class="col-md-6">
       <i class="fas fa-bed fa-3x"></i>
-      <h3>Boarding</h3>
-      <p>We offer state-of-the-art boarding facilities that ensure students have a comfortable and secure environment to thrive in their education.</p>
+      <h4>Boarding Facilities</h4>
+      <p>SPIA offers safe and comfortable boarding for students, creating an ideal atmosphere for academic focus and personal development.</p>
     </div>
     <div class="col-md-6">
       <i class="fas fa-map-marker-alt fa-3x"></i>
-      <h3>Location</h3>
-      <p>SPIA is located in Kamakara, Cibitoke Province, offering a peaceful and conducive learning environment.</p>
+      <h4>Peaceful Location</h4>
+      <p>Located in Kamakara, Cibitoke Province, our school offers a serene, distraction-free learning environment surrounded by nature.</p>
     </div>
   </div>
 </section>
 
-<!-- Testimonials & Success Stories -->
-<section class="container text-center py-5 bg-light">
-  <h2>What Our Students Say</h2>
-  <p>Hear from our students and alumni about their experience at SPIA.</p>
-  <div class="row">
-    <div class="col-md-6">
-      <blockquote class="blockquote">
-        <p>"SPIA transformed my academic journey. The teachers are supportive, and the learning environment is excellent."</p>
-        <footer class="blockquote-footer">Jane Doe, Class of 2023</footer>
-      </blockquote>
-    </div>
-    <div class="col-md-6">
-      <blockquote class="blockquote">
-        <p>"Thanks to SPIA, I was able to excel in my studies and secure a scholarship abroad."</p>
-        <footer class="blockquote-footer">John Smith, Class of 2022</footer>
-      </blockquote>
-    </div>
-  </div>
+<!-- Our Communication Strategy -->
+<section class="container text-center py-5">
+  <h2>Our Communication & Marketing Strategy</h2>
+  <p>SPIA understands the competitive environment in Burundi’s private education sector. We are implementing a modern and impactful marketing plan leveraging:</p>
+  <ul class="list-unstyled">
+    <li><i class="fas fa-bullhorn text-primary"></i> Digital media and social networks</li>
+    <li><i class="fas fa-tv text-primary"></i> Audiovisual campaigns in urban centers</li>
+    <li><i class="fas fa-user-friends text-primary"></i> Engagement with communities and influencers</li>
+    <li><i class="fas fa-handshake text-primary"></i> Trusted advertising partners and well-known local artists</li>
+  </ul>
+  <p class="mt-3">We aim to reach and inspire future parents and students by showcasing our unique philosophy of excellence.</p>
 </section>
 
 {% endblock %}

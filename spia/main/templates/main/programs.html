@@ -3,238 +3,214 @@
 
 {% block content %}
 
-<!-- Introduction Section -->
-<section class="intro-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/classroom.jpg" %}') center/cover no-repeat; height: 60vh;">
+<!-- Hero Section -->
+<section class="intro-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/ref4.jpg" %}') center/cover no-repeat; height: 60vh;">
     <div class="overlay p-5">
         <h2 class="fw-bold">Academics</h2>
         <p class="fs-4">Empowering students with a world-class education to shape their future.</p>
     </div>
 </section>
 
-<!-- Curriculum Section -->
-<section class="curriculum-section py-5 bg-light text-center">
+<!-- Educational Philosophy -->
+<section class="py-5 text-center">
     <div class="container">
-        <h3 class="fw-bold text-blue">Our Curriculum</h3>
-        <p class="fs-4">We offer a well-structured curriculum based on Cambridge International and IB standards.</p>
-        <div class="row">
+        <h3 class="fw-bold text-blue">Our Educational Philosophy</h3>
+        <p class="fs-5">
+            At SPIA, education is more than academics. We guide learners toward self-discovery and excellence through metacognitive, child-centered, and interdisciplinary approaches. Each student’s potential is nurtured in a supportive, inclusive, and stimulating environment.
+        </p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li> Encourage scientific reasoning and innovation</li>
+            <li> Build logical thinking through Mathematics</li>
+            <li> Foster global communication via English</li>
+            <li> Explore economic and social realities with relevance</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Programs & Curriculum -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Our Academic Programs</h3>
+        <p class="fs-5">SPIA follows the <strong>American International Curriculum</strong>, designed to meet global standards while integrating local realities.</p>
+        <div class="row mt-4">
             <div class="col-md-4">
-                <h4>Lower Secondary (Grades 7-9)</h4>
-                <p>Building strong foundations in core subjects with interactive learning.</p>
+                <h5>Lower Secondary (Grades 7–9)</h5>
+                <p>Core subjects: English, Math, Life Science, Global Perspectives, IT, Design, Life Skills, PE.</p>
             </div>
             <div class="col-md-4">
-                <h4>Upper Secondary (Grades 10-12)</h4>
-                <p>Advanced subjects with in-depth exploration to prepare for higher education.</p>
+                <h6>Upper Secondary (Grades 10–12)</h6>
+                <p>Specialized tracks in Sciences, Business, and Technology to prepare for the ICGSE and beyond.</p>
+                <a href="{% url 'courses' %}" class="btn btn-primary">See More</a>
             </div>
             <div class="col-md-4">
-                <h4>IB Diploma Programme</h4>
-                <p>Internationally recognized curriculum developing well-rounded global citizens.</p>
+                <h5>Electives</h5>
+                <p>Students can choose from Music, Geography, History, French, Art & Design, Health & Well-being, and more.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Timetables & School Life -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">School Schedules & Life at SPIA</h3>
+        <p class="fs-5">
+            SPIA’s daily schedule runs from <strong>7:30 AM to 5:00 PM</strong>, combining academics, sports, and extracurriculars. Evening study is organized from <strong>6:00 PM to 7:30 PM</strong>. Students follow a balanced rhythm designed for learning and personal growth.
+        </p>
+        <p class="fs-5">
+            A <strong>projected student population</strong> will grow gradually to 500 boarders by 2032, with English reinforcement at Year 7 ensuring all students are ready for international-level instruction.
+        </p>
+    </div>
+</section>
+
+<!-- Global Approach & Partnerships -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Our Global Academic Approach</h3>
+        <p class="fs-5">
+            SPIA partners with international institutions to ensure quality education and smooth transition into higher education abroad. Language certification such as <strong>IELTS, TOEFL</strong>, and <strong>American English</strong> will be supported.
+        </p>
+        <ul class="fs-5 text-start mx-auto" style="max-width: 800px;">
+            <li> Regional partnerships with EAC schools and international schools in Uganda</li>
+            <li> Intensive English program at Year 7 (first 3 months)</li>
+            <li> Training for students and teachers in English communication</li>
+            <li> Remote teaching support and live interaction with international instructors</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Technology Integration -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Digital Integration & ICT</h3>
+        <p class="fs-5">
+            Technology is a core pillar at SPIA. Students will have access to internet, virtual libraries, and digital tools for collaborative learning. Each student will receive an email account to communicate with teachers and receive assignments.
+        </p>
+        <p class="fs-5">
+            With ICT, our learners become autonomous, connected, and ready to navigate the digital world confidently and creatively.
+        </p>
+    </div>
+</section>
+
+<!-- Excellence Section -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Pursuing Excellence</h3>
+        <p class="fs-5">
+            Our academic structure is designed to achieve not only academic success but also character development. We prepare global citizens ready to thrive, lead, and serve.
+        </p>
+    </div>
+</section>
+
+<!-- Clubs & Enrichment -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h3 class="fw-bold text-blue">Student Clubs & Enrichment Programs</h3>
+        <p class="fs-5">Beyond academics, SPIA encourages holistic growth through a variety of student-led clubs.</p>
+        
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Innovation & Design Club</h5>
+                        <p class="card-text">Creative problem-solving through design thinking, engineering, and tech.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Servant Leadership Club</h5>
+                        <p class="card-text">Christ-like leadership through service, community action, and justice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Digital Media Club</h5>
+                        <p class="card-text">Content creation: video, photography, blogging, and school storytelling.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Girl Up – Daughters of Purpose</h5>
+                        <p class="card-text">Empowering young women through leadership, faith, and advocacy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Eco-Stewards Club</h5>
+                        <p class="card-text">Caring for creation through clean-up drives, gardening, and recycling.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Entrepreneurship & Finance Club</h5>
+                        <p class="card-text">Business basics, student ventures, and Biblical financial stewardship.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Coding & Future Tech Club</h5>
+                        <p class="card-text">Intro to coding, robotics, and ethical use of AI for rural development.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Dance & Movement Club</h5>
+                        <p class="card-text">Celebrating faith and culture through dance and choreography.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Drama & Theatre Club</h5>
+                        <p class="card-text">Skits and plays with moral, spiritual, and cultural messages.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Choir & Music Band Club</h5>
+                        <p class="card-text">Worship, instrumentals, and creative musical expression.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Public Speaking & Debate Club</h5>
+                        <p class="card-text">Confidence in speech, argumentation, and Gospel-centered communication.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Teaching Methods Section -->
-<section class="teaching-methods py-5 text-center">
-    <div class="container">
-        <h3 class="fw-bold text-blue">Teaching & Learning Methods</h3>
-        <p class="fs-4">Our teaching approach fosters creativity, critical thinking, and collaboration.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <i class="fas fa-chalkboard-teacher fa-3x"></i>
-                <h4>Interactive Learning</h4>
-                <p>Engaging students through discussions, projects, and hands-on activities.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-brain fa-3x"></i>
-                <h4>Critical Thinking</h4>
-                <p>Encouraging problem-solving skills through inquiry-based learning.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-users fa-3x"></i>
-                <h4>Collaborative Projects</h4>
-                <p>Promoting teamwork and communication through group work.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Excellence & Achievements -->
-<section class="excellence-section py-5 bg-light text-center">
-    <div class="container">
-        <h3 class="fw-bold text-blue">Excellence & Achievements</h3>
-        <p class="fs-4">Our students consistently achieve high academic standards and excel in various competitions.</p>
-    </div>
-</section>
 
 {% endblock %}
-
-{% comment %} {% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
-
-<!-- Introduction Section -->
-<section class="intro-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/classroom.jpg" %}') center/cover no-repeat; height: 60vh;">
-    <div class="overlay p-5">
-        <h2 class="fw-bold">Academics</h2>
-        <p class="fs-4">Empowering students with a world-class education to shape their future.</p>
-    </div>
-</section>
-
-<!-- Curriculum Section -->
-<section class="curriculum-section py-5 bg-light text-center">
-    <div class="container">
-        <h3 class="fw-bold text-blue">Our Curriculum</h3>
-        <p class="fs-4">We offer a well-structured curriculum based on Cambridge International and IB standards.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Lower Secondary (Grades 7-9)</h4>
-                <p>Building strong foundations in core subjects with interactive learning.</p>
-            </div>
-            <div class="col-md-4">
-                <h4>Upper Secondary (Grades 10-12)</h4>
-                <p>Advanced subjects with in-depth exploration to prepare for higher education.</p>
-            </div>
-            <div class="col-md-4">
-                <h4>IB Diploma Programme</h4>
-                <p>Internationally recognized curriculum developing well-rounded global citizens.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Teaching Methods Section -->
-<section class="teaching-methods py-5 text-center">
-    <div class="container">
-        <h3 class="fw-bold text-blue">Teaching & Learning Methods</h3>
-        <p class="fs-4">Innovative teaching approaches to enhance student engagement.</p>
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="list-group list-group-flush text-start">
-                    <li class="list-group-item">✔ Interactive Learning</li>
-                    <li class="list-group-item">✔ Project-Based Learning</li>
-                    <li class="list-group-item">✔ ICT Integration</li>
-                    <li class="list-group-item">✔ Small Class Sizes for Personalized Attention</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <img src="{% static 'images/teaching_methods.jpg' %}" class="img-fluid rounded" alt="Teaching Methods">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Facilities Section -->
-{% comment %} <section class="facilities-section py-5 bg-light text-center">
-    <div class="container">
-        <h3 class="fw-bold">State-of-the-Art Facilities</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <img src="{% static 'images/science_lab.jpg' %}" class="img-fluid rounded" alt="Science Lab">
-                <h5>Science Laboratories</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="{% static 'images/computer_lab.jpg' %}" class="img-fluid rounded" alt="Computer Lab">
-                <h5>Computer Labs</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="{% static 'images/library.jpg' %}" class="img-fluid rounded" alt="Library">
-                <h5>Library</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="{% static 'images/study_area.jpg' %}" class="img-fluid rounded" alt="Study Area">
-                <h5>Study Areas</h5>
-            </div>
-        </div>
-    </div>
-</section> {% endcomment %}
-
-{% comment %} <section class="facilities-section py-5 bg-light text-center">
-    <div class="container">
-        <h3 class="fw-bold">State-of-the-Art Facilities</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <i class="bi bi-flask text-primary" style="font-size: 3rem;"></i>
-                <h5 class="mt-3">Science Laboratories</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="bi bi-pc-display text-primary" style="font-size: 3rem;"></i>
-                <h5 class="mt-3">Computer Labs</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="bi bi-book text-primary" style="font-size: 3rem;"></i>
-                <h5 class="mt-3">Library</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="bi bi-mortarboard text-primary" style="font-size: 3rem;"></i>
-                <h5 class="mt-3">Study Areas</h5>
-            </div>
-        </div>
-    </div>
-</section> {% endcomment %}
-
-<!--<section class="facilities-section py-5 bg-light text-center">
-    <div class="container">
-        <h3 class="fw-bold text-blue">State-of-the-Art Facilities</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <i class="fas fa-flask"></i></i>
-                <h5 class="mt-3">Science Laboratories</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-desktop"></i>
-                <h5 class="mt-3">Computer Labs</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-book"></i>
-                <h5 class="mt-3">Library</h5>
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-graduation-cap"></i>
-                <h5 class="mt-3">Study Areas</h5>
-            </div>
-        </div>
-    </div>
-</section>-->
- <!-- Science Lab -->
- <!-- Computer Lab -->
- <!-- Library -->
- <!-- Study Areas -->
-
-
-<!-- Exams & Evaluations Section -->
-<!--<section class="exams-evaluations py-5 text-center">
-    <div class="container">
-        <h3 class="fw-bold">Exams & Evaluations</h3>
-        <p class="fs-4">Preparing students for globally recognized qualifications.</p>
-        <ul class="list-group list-group-flush text-start mx-auto" style="max-width: 600px;">
-            <li class="list-group-item">✔ Cambridge IGCSE & A-Level Exams</li>
-            <li class="list-group-item">✔ IB Diploma Programme Assessments</li>
-            <li class="list-group-item">✔ Continuous Assessment System</li>
-        </ul>
-    </div>
-</section>-->
-
-<!-- Support & Mentorship Section -->
-<!--<section class="support-mentorship py-5 bg-light text-center">
-    <div class="container">
-        <h3 class="fw-bold">Academic Support & Mentorship</h3>
-        <p class="fs-4">We provide guidance to help students reach their full potential.</p>
-        <ul class="list-group list-group-flush text-start mx-auto" style="max-width: 600px;">
-            <li class="list-group-item">✔ Academic Coaching & Mentorship</li>
-            <li class="list-group-item">✔ Reteach & Catch-Up Programs</li>
-            <li class="list-group-item">✔ Small Group Tutoring</li>
-        </ul>
-    </div>
-</section>
-
- Call-to-Action 
-<section class="cta-section text-center py-5">
-    <div class="container">
-        <h3 class="fw-bold">Ready to Join Us?</h3>
-        <p class="fs-4">Apply today and start your journey towards academic excellence.</p>
-        <a href="#" class="btn btn-lg btn-primary">Apply Now</a>
-    </div>
-</section>
-
-{% comment %}{% endblock %} {% endcomment %}-->

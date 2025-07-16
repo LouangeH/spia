@@ -5,17 +5,24 @@
     <h2>Contact Us</h2>
     <div class="row">
         <div class="col-md-6">
-            <p><i class="fas fa-envelope"></i> info@spia.ac.bi</p>
-            <p><i class="fas fa-phone"></i> +257 68 71 50 42</p>
+            <p><i class="fas fa-envelope"></i> info@spia.bi</p>
+            <p><i class="fas fa-phone"></i> +257 76 32 20 65 / 79 91 57 17</p>
             <p><i class="fas fa-map-marker-alt"></i> Cibitoke, Rugombo, Kamakara</p>
         </div>
         <div class="col-md-6">
-            <form>
-                <input type="text" class="form-control my-2" placeholder="Full Name">
-                <input type="email" class="form-control my-2" placeholder="Email">
-                <textarea class="form-control my-2" placeholder="Message"></textarea>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" class="form-control my-2" name="name" placeholder="Full Name" required>
+                <input type="email" class="form-control my-2" name="email" placeholder="Email" required>
+                <textarea class="form-control my-2" name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
+            
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success mt-3">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
         </div>
     </div>
 </section>

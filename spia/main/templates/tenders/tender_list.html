@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="container py-5 text-center">
+    <h2 class="fw-bold">Calls for Tenders</h2>
+
+    {% if tenders %}
+        <div class="row mt-4">
+            {% for tender in tenders %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ tender.title }}</h5>
+                            <p class="card-text">{{ tender.description|truncatewords:30 }}</p>
+                            <p class="text-muted"><strong>Deadline:</strong> {{ tender.deadline }}</p>
+                            <a href="{{ tender.document.url }}" class="btn btn-primary" download>Download TDR</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="fs-4 text-muted">There are currently no open tenders.</p>
+    {% endif %}
+</section>
+
+{% endblock %}

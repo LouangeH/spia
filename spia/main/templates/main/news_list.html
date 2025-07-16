@@ -4,62 +4,36 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/news_banner.jpg" %}') center/cover no-repeat; height: 60vh;">
+<section class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center" style="background: url('{% static "images/school_building.jpg.jpg" %}') center/cover no-repeat; height: 60vh;">
     <div class="overlay p-5">
-        <h1 class="fw-bold">Latest News & Events</h1>
+        
+    </div>
+</section>
+
+<section class="container py-5 text-center">
+    <h1 class="fw-bold">Latest News & Events</h1>
         <p class="fs-4">Stay updated with the latest school news and upcoming events.</p>
-    </div>
-</section>
 
-<!-- Latest News -->
-<section class="news-section py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-4">Latest News</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'images/news1.jpg' %}" class="card-img-top" alt="News Image">
-                    <div class="card-body">
-                        <h5 class="card-title">New Academic Year Starts</h5>
-                        <p class="card-text">Our school welcomes students for the new academic year 2024-2025.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+    {% if news %}
+        <div class="row mt-4">
+            {% for tender in news %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        {% if tender.image %}
+                            <img src="{{ tender.image.url }}" class="card-img-top" alt="{{ tender.title }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ tender.title }}</h5>
+                            <p class="card-text">{{ tender.content|truncatewords:30 }}</p>
+                            <p class="text-muted"><strong>Published at :</strong> {{ tender.published_at }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'images/news2.jpg' %}" class="card-img-top" alt="News Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Science Fair 2024</h5>
-                        <p class="card-text">Join us for an exciting science fair showcasing student innovations.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'images/news3.jpg' %}" class="card-img-top" alt="News Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Teacher Training Workshop</h5>
-                        <p class="card-text">Our teachers underwent specialized training to enhance classroom experience.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-    </div>
-</section>
-
-<!-- Upcoming Events -->
-<section class="events-section py-5">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-4">Upcoming Events</h2>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Parent-Teacher Conference:</strong> August 15, 2024 | School Auditorium</li>
-            <li class="list-group-item"><strong>Sports Day:</strong> September 5, 2024 | School Playground</li>
-            <li class="list-group-item"><strong>Annual Graduation:</strong> December 10, 2024 | Main Hall</li>
-        </ul>
-    </div>
+    {% else %}
+        <p class="fs-4 text-muted">There are currently no News.</p>
+    {% endif %}
 </section>
 
 <!-- Newsletter Subscription -->
